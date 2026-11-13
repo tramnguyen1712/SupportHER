@@ -1,0 +1,74 @@
+<!doctype HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SupportHER - Login</title>
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#2f3a4a" />
+
+  <link rel="icon" type="image/png" href="/images/icon-192.png" />
+  <link rel="apple-touch-icon" href="/images/icon-192.png" />
+
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body class="submission">
+<header class="submission" id="submissionHeader">
+    <h1>SUPPORTHER</h1>
+</header>
+
+<div id="submissionIntro">
+    <p>This page is for women-owned or operated businesses to submit their information to be 
+        added into the database of advertised spaces.
+    </p>
+    <p>If you are looking to advertise a local event 
+        instead of a business, please look to the local events tab instead.
+    </p>
+</div>
+
+<form class="container" id="businessSubmit" action="/send" method="post" novalidate>
+<div id="submissionPortalInfo">
+    <h2>Enter Details Below</h2>
+    <label for="businessName">Business Name:</label>
+    <input type="text" id="businessName" name="businessName" required>
+    <div></div>
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required>
+    <div></div>
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required>
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" minlength="2" maxlength="2" required>
+    <label for="zip">Zip Code:</label>
+    <input type="text" id="zip" name="zip" minlength="5" maxlength="5" required>
+    
+    <div></div>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <div></div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="businessPhone">Business Phone Number:</label>
+    <input type="tel" id="businessPhone" name="businessPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+    <div></div>
+    <input type="checkbox" id="terms" name="terms" required>
+    I agree to the Terms and Conditions
+
+    <button type="submit">Submit</button>
+</div>
+</form>
+
+<script src="/js/businessSubmission.js"></script>
+<script src="/js/sw-register.js"></script>
+
+</body>
+
+
+</html>

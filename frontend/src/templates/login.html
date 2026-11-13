@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SupportHER - Login</title>
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#2f3a4a" />
+
+  <link rel="icon" type="image/png" href="/images/icon-192.png" />
+  <link rel="apple-touch-icon" href="/images/icon-192.png" />
+
+  <link rel="stylesheet" href="/css/styles.css" />
+
+</head>
+
+<body class="login">
+  <header class="login">
+    <h1>SUPPORTHER</h1>
+  </header>
+
+  <main id="loginPage">
+    <h2>Login</h2>
+
+    <form class="container" id="loginForm" novalidate>
+      <div id="username">
+        <label for="usernameInput">Username:</label>
+        <input type="text" id="usernameInput" name="username" required>
+      </div>
+
+      <div id="password">
+        <label for="passwordInput">Password:</label>
+        <input type="password" id="passwordInput" name="password" required>
+      </div>
+
+      <div id="loginOptions">
+        <button type="submit">Login</button>
+        <button type="button" onclick="window.location.href='/register'">Sign-up</button>
+      </div>
+    </form>
+  </main>
+
+  <script type="module" src="/js/login.js"></script>
+  <script src="/js/sw-register.js"></script>
+  
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SupportHER - Offline</title>
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#2f3a4a" />
+
+  <link rel="icon" type="image/png" href="/images/icon-192.png" />
+  <link rel="apple-touch-icon" href="/images/icon-192.png" />
+
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+  <main class="page">
+    <section class="emptyCard">
+      <h1>You're offline</h1>
+      <p class="muted">
+        Some SupportHER features need an internet connection. You can still view pages and saved content that were loaded before.
+      </p>
+
+      <div style="margin-top: 16px;">
+        <a class="btn primary" href="/browse">Go to Browse</a>
+        <a class="btn outline" href="/favorites">View Saved</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/sw-register.js"></script>
+</body>
+</html>

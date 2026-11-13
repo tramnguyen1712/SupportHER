@@ -1,0 +1,26 @@
+.register .pageTitle { margin: 6px 0 6px; font-size: 22px; }
+.register .pageSub { margin: 0 0 14px; color: #6b7280; }
+
+.register .cardBlock {
+  border: 1px solid #d0d5dd;
+  border-radius: 14px;
+  padding: 16px;
+  background: #fff;
+}
+
+.register .form { margin-top: 10px; }
+.register .field { margin-bottom: 14px; }
+.register input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d0d5dd;
+  outline: none;
+}
+.register .checkboxRow { margin-top: 6px; }
+.register .checkLabel { display: flex; gap: 10px; align-items: center; font-weight: 600; }
+.register .formActions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+
+.register .error { color: #b42318; font-size: 13px; margin-top: 6px; }
+.register .success { color: #067647; font-size: 14px; margin-top: 10px; font-weight: 700; }
+.register .smallText { margin-top: 12px; color: #6b7280; font-size: 14px; }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SupportHER - Favorites Page</title>
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#2f3a4a" />
+
+  <link rel="icon" type="image/png" href="/images/icon-192.png" />
+  <link rel="apple-touch-icon" href="/images/icon-192.png" />
+
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body class="favorites">
+  <main class="page">
+    <header class="topbar">
+      <a class="btn outline" href="/browse">← Back</a>
+      <div class="brand">Saved</div>
+      <div style="width: 90px;"></div>
+    </header>
+
+    <div class="infoBar">
+      <span>Saved places available offline</span>
+    </div>
+
+    <!-- Empty state -->
+    <section id="emptyState" class="emptyState" hidden>
+      <div class="emptyCard">
+        <div class="emptyTitle">No saved businesses yet</div>
+        <a class="btn primary" href="/map">Discover Businesses</a>
+      </div>
+    </section>
+
+    <!-- Saved list -->
+    <section id="savedList" class="resultsList" hidden></section>
+  </main>
+
+  <script src="/js/favorites.js"></script>
+  <script src="/js/sw-register.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend</title>
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#2f3a4a" />
+
+  <link rel="icon" type="image/png" href="/images/icon-192.png" />
+  <link rel="apple-touch-icon" href="/images/icon-192.png" />
+
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="browse">
+  <div class="page">
+    <header class="topbar">
+
+      <button class="saved-btn" type="button" aria-label="Saved businesses">
+        <span class="saved-icon">🔖</span>
+        <span>Saved</span>
+      </button>
+    </header>
+
+    <section class="search-section">
+      <div class="search-box">
+        <span class="search-icon">⌕</span>
+        <input
+          type="text"
+          placeholder="Search businesses or categories"
+          aria-label="Search businesses or categories"
+        >
+      </div>
+    </section>
+
+    <main class="content">
+      <h2 class="section-title">Browse by Category</h2>
+
+      <section class="category-grid">
+        <button class="category-card" type="button" data-category="Restaurants">
+          <div class="category-icon">🍴</div>
+          <div class="category-label">Restaurants</div>
+        </button>
+
+        <button class="category-card" type="button" data-category="Beverages">
+          <div class="category-icon">☕</div>
+          <div class="category-label">Beverages</div>
+        </button>
+
+        <button class="category-card" type="button" data-category="Beauty">
+          <div class="category-icon">✂️</div>
+          <div class="category-label">Beauty</div>
+        </button>
+
+        <button class="category-card" type="button" data-category="Clothing">
+          <div class="category-icon">👚</div>
+          <div class="category-label">Clothing</div>
+        </button>
+      </section>
+
+      <div class="map-btn-wrap">
+        <button class="map-btn" id="viewMapBtn" type="button">View on Map</button>
+        <button class="map-btn secondary" id="viewEventsBtn" type="button">View Events</button>
+      </div>
+    </main>
+  </div>
+
+
+  <script src="/js/browse.js"></script>
+  <script src="/js/sw-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SupportHER - Map</title>
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#2f3a4a" />
+
+  <link rel="icon" type="image/png" href="/images/icon-192.png" />
+  <link rel="apple-touch-icon" href="/images/icon-192.png" />
+
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body class="map">
+  <main class="page">
+    <header class="topbar">
+      <a class="btn outline" href="/browse">← Back</a>
+      <div class="brand">SupportHER</div>
+      <a class="btn outline" href="/favorites">Saved</a>
+    </header>
+
+    <section class="mapControls">
+      <div class="searchWrap">
+        <span class="icon">🔎</span>
+        <input id="searchInput" class="searchInput" type="text" placeholder="Search businesses or categories" />
+      </div>
+
+      <button id="openFiltersBtn" class="iconBtn" aria-label="Open filters">⚙️</button>
+      <a class="btn outline" href="/results" id="listViewBtn">List View</a>
+    </section>
+
+    <!-- Active filter chips -->
+    <section class="chipRow" id="chipRow"></section>
+
+    <!-- MAP placeholder (We assuming NCSU map for viewing for now) -->
+    <section class="mapArea" aria-label="Map View">
+        <div class="mapEmbedWrap">
+            <iframe
+            title="NCSU Map"
+            class="mapEmbed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=North+Carolina+State+University,+Raleigh,+NC&output=embed"
+            allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Bottom selected business panel -->
+    <section class="bottomPanel" id="bottomPanel">
+      <div class="panelTitle" id="panelName">Luna Bistro</div>
+      <div class="panelMeta" id="panelMeta">Restaurants • 0.4 mi</div>
+      <div class="panelAddr" id="panelAddr">123 Main St, Suite 100</div>
+
+      <div class="panelActions">
+        <button class="btn primary" id="directionsBtn">Directions</button>
+        <button class="btn outline" id="saveBtn">Save</button>
+        <a class="btn outline" href="/reviews" id="detailsBtn">Reviews</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Filters modal -->
+  <div class="modalBackdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Filters">
+      <div class="modalHeader">
+        <div class="modalTitle">Filters</div>
+        <button class="iconBtn" id="closeFiltersBtn" aria-label="Close filters">✕</button>
+      </div>
+
+      <div class="modalBody">
+        <div class="field">
+          <label for="categorySelect">Category</label>
+          <select id="categorySelect">
+            <option>Restaurants</option>
+            <option>Beverages</option>
+            <option>Beauty</option>
+            <option>Clothing</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Distance</label>
+          <div class="radioRow">
+            <label class="radioItem"><input type="radio" name="distance" value="1"> 1 mi</label>
+            <label class="radioItem"><input type="radio" name="distance" value="5"> 5 mi</label>
+            <label class="radioItem"><input type="radio" name="distance" value="10"> 10 mi</label>
+          </div>
+        </div>
+
+        <div class="field toggleRow">
+          <label for="openNowToggle">Open Now</label>
+          <input id="openNowToggle" type="checkbox" />
+        </div>
+
+        <div class="field">
+          <label>Price</label>
+          <div class="priceRow">
+            <button class="priceChip" data-price="$">$</button>
+            <button class="priceChip" data-price="$$">$$</button>
+            <button class="priceChip" data-price="$$$">$$$</button>
+          </div>
+          <div class="helperText" id="priceHelper">Optional</div>
+        </div>
+      </div>
+
+      <div class="modalFooter">
+        <button class="btn primary" id="applyBtn">Apply</button>
+        <button class="btn outline" id="clearBtn">Clear All</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/map.js"></script>
+  <script src="/js/sw-register.js"></script>
+  
+</body>
+</html>

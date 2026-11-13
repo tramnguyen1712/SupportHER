@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SupportHER - Reviews</title>
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#2f3a4a" />
+
+  <link rel="icon" type="image/png" href="/images/icon-192.png" />
+  <link rel="apple-touch-icon" href="/images/icon-192.png" />
+
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body class="reviews">
+    <main class="page" style="max-width: 820px; margin: 0 auto; padding: 24px 16px;">
+        <header class="topbar" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <h1 style="margin: 0; font-size: 24px;">Community Reviews</h1>
+            <a class="btn outline" href="/browse">Back to Browse</a>
+        </header>
+
+        <section class="card" style="padding: 16px; margin-bottom: 16px;">
+            <h2 style="margin-top: 0;">Add a Review</h2>
+            <form id="reviewForm" novalidate>
+                <div style="display: grid; gap: 12px;">
+                    <label>
+                        Business Name
+                        <input id="businessName" name="businessName" type="text" required maxlength="80" placeholder="e.g., Luna Bistro" style="display: block; width: 100%; margin-top: 6px;" />
+                    </label>
+
+                    <label>
+                        Your Name (optional)
+                        <input id="reviewerName" name="reviewerName" type="text" maxlength="60" placeholder="Anonymous" style="display: block; width: 100%; margin-top: 6px;" />
+                    </label>
+
+                    <label>
+                        Rating
+                        <select id="rating" name="rating" required style="display: block; width: 100%; margin-top: 6px;">
+                            <option value="">Select rating</option>
+                            <option value="★★★★★">★★★★★</option>
+                            <option value="★★★★☆">★★★★☆</option>
+                            <option value="★★★☆☆">★★★☆☆</option>
+                            <option value="★★☆☆☆">★★☆☆☆</option>
+                            <option value="★☆☆☆☆">★☆☆☆☆</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Review
+                        <textarea id="reviewText" name="reviewText" required maxlength="500" rows="4" placeholder="Share your experience..." style="display: block; width: 100%; margin-top: 6px;"></textarea>
+                    </label>
+
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <button class="btn primary" type="submit">Post Review</button>
+                        <span id="formMessage" aria-live="polite" style="font-size: 14px;"></span>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="card" style="padding: 16px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <h2 style="margin: 0;">Recent Reviews</h2>
+                <span id="reviewCount" style="color: #4b5563; font-size: 14px;"></span>
+            </div>
+
+            <div id="emptyState" style="display: none; color: #6b7280;">No reviews yet. Be the first to add one.</div>
+            <div id="reviewsList" style="display: grid; gap: 12px;"></div>
+        </section>
+    </main>
+
+    <script src="/js/reviews.js"></script>
+</body>
+</html>
